@@ -1,0 +1,21 @@
+node_modules
+.next
+out
+dist
+.DS_Store
+*.log
+.env
+.env.local
+.env*.local
+data/*.db
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+coverage
+.vscode
+.idea
+
+# Build artifacts and dev server logs
+*.tsbuildinfo
+dev.out
+dev.err

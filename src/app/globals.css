@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 250 250 252;
+  --foreground: 17 17 27;
+}
+
+html, body {
+  background: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md font-medium transition disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-accenture-500 focus:ring-offset-2;
+  }
+  .btn-primary {
+    @apply btn bg-accenture-500 text-white hover:bg-accenture-600 px-4 py-2 text-sm shadow-sm;
+  }
+  .btn-secondary {
+    @apply btn bg-white border border-slate-200 text-slate-800 hover:bg-slate-50 px-4 py-2 text-sm shadow-sm;
+  }
+  .btn-ghost {
+    @apply btn text-slate-600 hover:bg-slate-100 px-3 py-2 text-sm;
+  }
+  .btn-danger {
+    @apply btn bg-rose-600 text-white hover:bg-rose-700 px-4 py-2 text-sm shadow-sm;
+  }
+  .input {
+    @apply block w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm shadow-sm placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-accenture-500 focus:border-accenture-500 disabled:bg-slate-50 disabled:text-slate-500;
+  }
+  .label {
+    @apply block text-xs font-medium text-slate-600 mb-1.5;
+  }
+  .card {
+    @apply rounded-xl border border-slate-200 bg-white shadow-soft;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full border px-2 py-0.5 text-[11px] font-semibold;
+  }
+}
+
+/* Subtle background decoration */
+.bg-grid {
+  background-image:
+    radial-gradient(circle at 0 0, rgba(161,0,255,0.06), transparent 40%),
+    radial-gradient(circle at 100% 100%, rgba(0,123,255,0.06), transparent 40%);
+}
