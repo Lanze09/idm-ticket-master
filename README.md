@@ -3,6 +3,7 @@
 Centralized ticketing system for IDM (Intelligent Data Migration) — built for Conversion Teams to raise issues and IDM Support to triage, assign, and resolve them with full SLA / audit-trail support.
 
 > **First time running this?** Read **[SETUP.md](./SETUP.md)** — a step-by-step walkthrough written for non-technical users.
+> **Want the deep dive?** Read **[`docs/`](./docs/)** — architecture, data model, workflows, and API reference (with Mermaid diagrams).
 
 > Built per the requirements in `Ticketing System References/IDM_TicketSupport_Requirements_v5.xlsx` and `IDM-TICKET SUPPORT 1.pptx`.
 
