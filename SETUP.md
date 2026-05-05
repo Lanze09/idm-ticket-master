@@ -210,7 +210,14 @@ This project intentionally uses **Node 20+'s built-in SQLite** so you don't need
 Use the demo accounts shown on the login page (click them to auto-fill). The first time you sign in, the database is auto-created and seeded.
 
 ### I want to wipe the database and start fresh
-Stop the server (Ctrl+C), then delete the `data/` folder:
+
+**Option A (recommended):** stop the server, then run the reset script:
+```bash
+npm run db:reset
+```
+This deletes the SQLite file and re-runs the seed in one step. You'll be back to the demo accounts and three sample tickets.
+
+**Option B (manual):** stop the server (Ctrl+C), then delete the `data/` folder:
 ```bash
 # Mac / Linux
 rm -rf data
@@ -218,6 +225,12 @@ rm -rf data
 Remove-Item data -Recurse -Force
 ```
 Next time you run `npm run dev` and sign in, the database and demo data will be re-created from scratch.
+
+### How do I just populate demo data without launching the app (e.g. on a Linux server)?
+```bash
+npm run db:seed
+```
+Idempotent — if users already exist, it does nothing. Useful when you want the demo accounts and sample tickets ready *before* anyone logs in for the first time.
 
 ### How do I update to the latest version of this project?
 ```bash

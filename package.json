@@ -8,8 +8,8 @@
     "start": "next start -p 3000",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "db:reset": "node --import tsx/esm scripts/reset-db.ts",
-    "db:seed": "node --import tsx/esm scripts/seed.ts"
+    "db:reset": "tsx scripts/reset-db.ts",
+    "db:seed": "tsx scripts/seed.ts"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

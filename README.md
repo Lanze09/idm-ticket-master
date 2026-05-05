@@ -33,6 +33,12 @@ pnpm dev                # http://localhost:3000
 
 The database is auto-created on first run and seeded with demo accounts and a few tickets.
 
+**Database management scripts** (run from the project folder):
+| Command | What it does |
+|---|---|
+| `npm run db:seed` | Populate demo data if database is empty (idempotent — safe to run anytime). |
+| `npm run db:reset` | Wipe the database and re-seed from scratch. Stop the app first. |
+
 ### Demo accounts
 
 | Email | Password | Role | Projects |
